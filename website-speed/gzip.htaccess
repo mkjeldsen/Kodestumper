@@ -1,0 +1,12 @@
+# WHAT'S THIS?
+# A boilerplate for gzipping files via .htaccess.
+#
+# HOW TO USE:
+# add to your existing .htaccess or create a new
+# one by removing "gzip" from the file name.
+#
+<ifModule mod_deflate.c>
+	<FilesMatch "\.(js|css|html|htm|txt)$">
+		SetOutputFilter DEFLATE
+	</FilesMatch>
+</ifModule>
