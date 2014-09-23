@@ -6,7 +6,7 @@
 # one by removing "gzip" from the file name.
 #
 <ifModule mod_deflate.c>
-	<FilesMatch "\.(js|css|html|htm|txt)$">
+	<FilesMatch "\.(js|css|html|htm|txt|svg|jpg|jpeg|png|gif|bmp)$">
 		SetOutputFilter DEFLATE
 	</FilesMatch>
 </ifModule>
