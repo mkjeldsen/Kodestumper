@@ -1,4 +1,5 @@
 <?php
+	// Output MySQL result debugging data (https://github.com/mkjeldsen/Kodestumper/tree/master/php-mysql-result-output-to-table)
 	function mysql_output_result_table($sql,$db,$output_to='html') {
 		$rs = $db->query($sql);
 		$cols = null;
@@ -27,9 +28,11 @@
 				foreach ($cols as $col) {
 					$cells[] = $row[$col];
 				}
+//				var_dump($cells);
 				foreach ($cells as $cell) {
 					$cells_out .= "'" . $cell . "',";
 				}
+//				var_dump($cells_out);
 				$cells_out = rtrim($cells_out,",");
 				echo "row.push( new Row(" . $cells_out . ") );\n";
 				$cells = "";
@@ -42,7 +45,7 @@
 				if ( ! $cols) {
 					$cols = array_keys($row);
 
-					echo "<table>\n<thead>\n<tr>";
+					echo "<table border='1' style='border-collapse:collapse;'>\n<thead style='background:#eee;'>\n<tr>";
 					foreach ($cols as $col) {
 						echo "<th>$col</th>\n";
 					}
