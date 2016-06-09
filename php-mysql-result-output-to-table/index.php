@@ -27,11 +27,9 @@
 				foreach ($cols as $col) {
 					$cells[] = $row[$col];
 				}
-//				var_dump($cells);
 				foreach ($cells as $cell) {
 					$cells_out .= "'" . $cell . "',";
 				}
-//				var_dump($cells_out);
 				$cells_out = rtrim($cells_out,",");
 				echo "row.push( new Row(" . $cells_out . ") );\n";
 				$cells = "";
