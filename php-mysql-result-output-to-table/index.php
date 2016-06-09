@@ -46,7 +46,7 @@
 					foreach ($cols as $col) {
 						echo "<th>$col</th>\n";
 					}
-					echo "</tr>\n<thead>\n<tbody>";
+					echo "</tr>\n</thead>\n<tbody>";
 				}
 
 				echo "<tr>\n";
